@@ -15,17 +15,6 @@ body{
   background: #5CA5A5;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 .section{
   margin-top:56px;
   padding:0 24px 34px 24px;
@@ -41,6 +30,11 @@ body{
 
 .header-container{
   border-left: 5px solid #5CA5A5;
+  padding:0 24px 24px 24px;
+  background: #FFFFFF;
+  box-shadow: 0px 15px 20px -5px rgba(13, 113, 130, 0.15);
+  border-radius: 5px;
+  margin-top:40px;
 }
 
 .card-img{
@@ -103,6 +97,13 @@ body{
   color: #2B3939;
 }
 
+.description{
+  margin-top:8px;
+  display:flex;
+  align-items: center;
+  gap:9px;
+}
+
 .day{ 
   font-weight: 500;
   font-size: 16px;
@@ -127,19 +128,13 @@ body{
   color: #7C8F8F;
 }
 
-.description{
-  margin-top:8px;
-  display:flex;
-  align-items: center;
-  gap:9px;
-}
-
 .line{
   margin-top:15px;
   width:279px;
   height:1px;
   background: #B7C4C4;
 }
+
 
 .buttons{
   margin-top:16px;
@@ -148,7 +143,8 @@ body{
   flex-wrap: wrap;
 }
 
-.buttons button{
+.category-btn{
+  padding:5px 10px 3px 8px;
   border:none;
   font-family: 'League Spartan';
   font-style: normal;
@@ -160,23 +156,6 @@ body{
   height:32px;
 }
 
-.frontend-btn{
-  width:81px;
-}
-
-.senior-btn{
-  width:62px;
-}
 
 
-.html-btn{
-  width:58px;
-}
 
-.css-btn{
-  width:44px;
-}
-
-.javascript-btn{
-  width:91px;
-}
