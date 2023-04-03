@@ -11,13 +11,17 @@ body{
   font-family: 'League Spartan';
 }
 
+main{
+}
+
 .header-image{
   background: #5CA5A5;
 }
 
 .section{
-  margin-top:56px;
   padding:0 24px 34px 24px;
+  margin-top:56px;
+
 }
 
 .card{
@@ -144,7 +148,9 @@ body{
 }
 
 .category-btn{
-  padding:5px 10px 3px 8px;
+  display:flex;
+  align-items: center;
+  padding:5px 8px 3px 8px;
   border:none;
   font-family: 'League Spartan';
   font-style: normal;
@@ -154,6 +160,57 @@ body{
   color: #5CA5A5;
   border-radius: 4px;
   height:32px;
+}
+
+
+.search-bar{
+  display:none;
+  align-items: center;
+  justify-content: space-between;
+  padding:20px 25px 20px 20px;
+  width:327px;
+  position:relative;
+  margin-top:-35px;
+  margin-left:25px;
+  background: #FFFFFF;
+  box-shadow: 0px 15px 20px -5px rgba(13, 113, 130, 0.15);
+  border-radius: 5px;
+}
+
+
+
+.searchBarButtons{
+  display:flex;
+  flex-wrap: wrap;
+  gap:16px;
+}
+
+
+.removeBackground{
+  margin-right:-11px;
+  margin-top:-3px;
+  margin-left:11px;
+  width:32px;
+  height:32px;
+  background: #5CA5A5;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.remove{
+    margin-top:9px;
+}
+
+
+
+.clear{
+  font-family: 'League Spartan';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.123077px;
+  color: #7C8F8F;
 }
 
 

@@ -1,7 +1,13 @@
 import data from "./data.json" assert { type: "json" };
 
-const list = document.querySelector(".statistics")
+const searchBar = document.querySelector(".search-bar")
 const section = document.querySelector(".section")
+const searchBarButtons = document.querySelector(".searchBarButtons")
+const clear =document.querySelector(".clear");
+
+let bar = []
+
+
 
 const createDomElement = (tag, className, src, id, text, event, eventFc) => {
   const element = document.createElement(tag);
@@ -27,6 +33,59 @@ const createDomElement = (tag, className, src, id, text, event, eventFc) => {
   return element;
 
 };
+
+
+
+function makeButtons () {
+  searchBarButtons.innerHTML = '';
+  for (let index = 0; index < bar.length; index++) {
+    const string = bar[index];
+    const stringButton = createDomElement("button", "category-btn", null, null ,string );
+    const removeBackground = createDomElement("div", "removeBackground");
+    const remove = createDomElement("img", "remove", "./images/icon-remove.svg" );
+   
+  
+
+    
+    searchBarButtons.append(stringButton);
+    stringButton.append(removeBackground);
+    removeBackground.append(remove);
+  
+
+
+    remove.addEventListener("click", () => {
+      bar.splice(index, 1); 
+      makeButtons(); 
+      
+      
+      if (bar.length === 0) {
+        searchBar.style.display = 'none';
+      }
+      
+    if (bar.length > 0) {
+      searchBar.style.display = 'flex';
+
+    }
+     
+    });
+
+
+
+    
+   
+  }
+
+   
+}
+
+clear.addEventListener("click", () => {
+  searchBar.style.display = "none";
+  bar = []
+});
+
+
+
+
 
 
 
@@ -56,6 +115,25 @@ for (let index = 0; index < data.length; index++) {
      const levelElement = createDomElement("button", "category-btn", null, null, level );
 
 
+
+     
+     roleElement.addEventListener("click",function(){
+      bar.push(roleElement.textContent);
+      makeButtons()
+      searchBar.style.display = "flex"
+      
+     })
+
+
+     levelElement.addEventListener("click", function(){
+      bar.push(levelElement.textContent);
+      makeButtons()
+      searchBar.style.display = "flex"
+     
+     })
+
+
+    
      buttonText.append(companyName);
      workDescription.append(postedAtElement);
      workDescription.append(oval);
@@ -65,15 +143,29 @@ for (let index = 0; index < data.length; index++) {
      buttonsContainer.append(roleElement);
      buttonsContainer.append(levelElement);
 
+
      
      for (let index = 0; index < languages.length; index++) {
       const languagesElement = createDomElement("button", "category-btn", null, null, languages[index]);
       buttonsContainer.append(languagesElement);
+      languagesElement.addEventListener("click", function(){
+        bar.push(languagesElement.textContent);
+        makeButtons()
+        searchBar.style.display = "flex"
+       
+       })
     }
 
     for (let index = 0; index < tools.length; index++) {
       const toolsElement = createDomElement ("button", "category-btn", null, null, tools[index]);
       buttonsContainer.append(toolsElement);
+      toolsElement.addEventListener("click", function(){
+        bar.push(toolsElement.textContent);
+        makeButtons()
+        searchBar.style.display = "flex"
+      
+     })
+
     }
     
 
