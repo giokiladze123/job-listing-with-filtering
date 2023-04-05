@@ -116,7 +116,10 @@ function makeJobs(array) {
       tools,
     } = array[index];
   
+
+    const imgTextContainer = createDomElement("div","imgTextContainer")
     const statisticBox = createDomElement("div", "card");
+    const textContainer = createDomElement("div","textContainer");
     const statisticBoxBlue = createDomElement("div", "header-container");
     const logoElement = createDomElement("img", "card-img", logo);
     const companyName = createDomElement(
@@ -193,6 +196,10 @@ function makeJobs(array) {
       makeJobs(newArray);
     });
   
+
+  
+  
+  
     buttonText.append(companyName);
     workDescription.append(postedAtElement);
     workDescription.append(oval);
@@ -253,20 +260,31 @@ function makeJobs(array) {
   
     if (featured) {
       section.append(statisticBoxBlue);
+      statisticBoxBlue.append(imgTextContainer);
+      
+      statisticBoxBlue.append(textContainer);
       statisticBoxBlue.append(logoElement);
-      statisticBoxBlue.append(buttonText);
-      statisticBoxBlue.append(positionAvatar);
-      statisticBoxBlue.append(workDescription);
       statisticBoxBlue.append(line);
+      textContainer.append(buttonText);
+      imgTextContainer.append(logoElement);
+
+      statisticBoxBlue.append(textContainer);
+      textContainer.append(positionAvatar)
+      textContainer.append(workDescription);
       statisticBoxBlue.append(buttonsContainer);
+      imgTextContainer.append(textContainer);
     } else {
       section.append(statisticBox);
+      statisticBox.append(imgTextContainer);
       statisticBox.append(logoElement);
-      statisticBox.append(buttonText);
-      statisticBox.append(positionAvatar);
-      statisticBox.append(workDescription);
+      textContainer.append(buttonText);
+      textContainer.append(positionAvatar)
+      textContainer.append(workDescription);
+      imgTextContainer.append(logoElement);
       statisticBox.append(line);
+      statisticBox.append(textContainer);
       statisticBox.append(buttonsContainer);
+      imgTextContainer.append(textContainer);
     }
   }
 

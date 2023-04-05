@@ -209,7 +209,83 @@ body{
   letter-spacing: -0.123077px;
   color: #7C8F8F;
 }
+.desktop-header{
+  display:none;
+}
 
 
+@media screen and (min-width:1440px) {
+  
+  .section{
+    padding:0 165px 120px 165px;
+  }
+
+  .mobile-header{
+    display:none;
+  }
+
+  .desktop-header{
+    display:block;
+  }
+
+  .search-bar{
+    padding:20px 40px 20px 40px;
+    width:1110px;
+    margin-left:165px;
+
+  }
+
+  .searchBarButtons{
+    flex-direction: row;
+  }
+
+  .card{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:32px 40px 32px 35px;
+  }
+
+  .header-container{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:32px 40px 32px 35px;
+  }
+
+  .imgTextContainer{
+    display:flex;
+    align-items: center;
+  }
+
+  .card-img{
+    margin-top:10px;
+    margin-right:24px;
+    width:88px;
+    height:88px;
+    
+  }
+
+  .textContainer{
+    margin-right:263px;
+  }
+
+  .line{
+    display:none;
+  }
 
 
+  .company-name{
+    margin-right:15px;
+  }
+
+  .buttons{
+    flex-wrap: nowrap;
+  }
+
+  .position{
+    font-weight: 700;
+    font-size: 22px
+  }
+
+}
