@@ -213,6 +213,20 @@ body{
   display:none;
 }
 
+.oval{
+  background: #B7C4C4;
+  width:4px;
+  height:4px;
+  border-radius: 50%;
+}
+
+.ovalTwo{
+  background: #B7C4C4;
+  width:4px;
+  height:4px;
+  border-radius: 50%;
+}
+
 
 @media screen and (min-width:1440px) {
   

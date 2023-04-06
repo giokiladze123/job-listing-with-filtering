@@ -147,9 +147,9 @@ function makeJobs(array) {
     );
     const workDescription = createDomElement("div", "description");
     const postedAtElement = createDomElement("p", "day", null, null, postedAt);
-    const oval = createDomElement("img", "oval", "./images/Oval.svg");
+    const oval = createDomElement("div", "ovalTwo",);
     const contractElement = createDomElement("p", "time", null, null, contract);
-    const secondOval = createDomElement("img", "oval", "./images/Oval.svg");
+    const secondOval = createDomElement("div", "oval",);
     const locationElement = createDomElement(
       "p",
       "location",
