@@ -281,6 +281,7 @@ body{
 
   .buttons{
     flex-wrap: nowrap;
+    margin-top:0;
   }
 
   .position{
@@ -288,4 +289,16 @@ body{
     font-size: 22px
   }
 
+  .description{
+    display:flex;
+  }
+
+  .company-name{
+    font-size: 18px;
+    line-height: 17px;
+  }
+
+  .title-btn{
+    margin-top:0;
+  }
 }
